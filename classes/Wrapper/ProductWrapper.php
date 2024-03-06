@@ -165,9 +165,9 @@ class ProductWrapper
         }
 
         // We will specify variant ID if we have it
-        //if (!empty($product['id_product_attribute'])) {
-        //    $item['item_id'] .= '-' . $product['id_product_attribute'];
-        //}
+        if (!empty($product['id_product_attribute'])) {
+            $item['item_id'] .= '-' . $product['id_product_attribute'];
+        }
 
         // Information about a chosen variant, if we have it (cart list has this out of the box)
         if (!empty($product['attributes_small'])) {

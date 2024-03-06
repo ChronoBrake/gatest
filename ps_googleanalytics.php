@@ -15,7 +15,7 @@
  * @author    PrestaShop SA <contact@prestashop.com>
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- * International Registered Trademark & Property of PrestaShop SA1
+ * International Registered Trademark & Property of PrestaShop SA
  */
 if (!defined('_PS_VERSION_')) {
     exit;
@@ -47,7 +47,7 @@ class Ps_Googleanalytics extends Module
     {
         $this->name = 'ps_googleanalytics';
         $this->tab = 'analytics_stats';
-        $this->version = '5.0.0';
+        $this->version = '5.0.2';
         $this->ps_versions_compliancy = ['min' => '1.7.7', 'max' => _PS_VERSION_];
         $this->author = 'PrestaShop';
         $this->module_key = 'fd2aaefea84ac1bb512e6f1878d990b8';

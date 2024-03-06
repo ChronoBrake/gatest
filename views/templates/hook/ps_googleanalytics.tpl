@@ -32,35 +32,5 @@
       {if $backOffice && !$trackBackOffice}, 'non_interaction': true, 'send_page_view': false{/if}
     {rdelim}
   );
-
-  gtag('set', 'user_status', '{if $customer.is_logged}Logged-in{else}Logged-out{/if}');
-  {if isset($page.page_name) && ($page.page_name == 'product' || $page.page_name == 'category' || $page.page_name == 'module-pm_advancedsearch4-searchresults' || $page.page_name == 'search')}
-    {assign var="category1" value=null}
-    {assign var="category2" value=null}
-    {assign var="category3" value=null}
-    {assign var="category4" value=null}
-
-    {if $breadcrumb.count > 1}
-      {assign var="category1" value=$breadcrumb.links.1.title|escape:'javascript'}
-    {/if}
-    {if $breadcrumb.count > 2}
-      {assign var="category2" value=$breadcrumb.links.2.title|escape:'javascript'}
-    {/if}
-    {if $breadcrumb.count > 3}
-      {assign var="category3" value=$breadcrumb.links.3.title|escape:'javascript'}
-    {/if}
-    {if $breadcrumb.count > 4}
-      {assign var="category4" value=$breadcrumb.links.4.title|escape:'javascript'}
-    {/if}
-
-    gtag('set', {
-      {if $category1}'category1': '{$category1}',{/if}
-      {if $category2}'category2': '{$category2}',{/if}
-      {if $category3}'category3': '{$category3}',{/if}
-      {if $category4}'category4': '{$category4}'{/if}
-    });
-
-
-  {/if}
 </script>
 
